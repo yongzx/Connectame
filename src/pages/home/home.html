@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <p>Want</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-select [(ngModel)]="need">
+        <ion-option value="food">Food</ion-option>
+        <ion-option value="water">Water</ion-option>
+        <ion-option value="cleaning">Cleaning</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item>
+      <p>Provide</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-select [(ngModel)]="donation">
+        <ion-option value="food">Food</ion-option>
+        <ion-option value="water">Water</ion-option>
+        <ion-option value="cleaning">Cleaning</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-item>
+      <button ion-button (click)="passNeedDonation()">Submit</button>
+  </ion-item>
+</ion-content>
