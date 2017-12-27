@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Travel
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-label color="primary">Drive From:</ion-label>
+            <ion-input placeholder="Address" [(ngModel)]="driveFrom"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="primary">Drive To:</ion-label>
+            <ion-input placeholder="Address" [(ngModel)]="driveTo"></ion-input>
+        </ion-item>
+    </ion-list>
+
+    <ion-item>
+        <button ion-button (click)="passDrive()">Submit</button>
+    </ion-item>
+</ion-content>
