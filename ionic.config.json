@@ -1,0 +1,8 @@
+{
+  "name": "Connectame",
+  "app_id": "5b3395c4",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
