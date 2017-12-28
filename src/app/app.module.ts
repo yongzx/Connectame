@@ -10,6 +10,7 @@ import { TransferPage } from '../pages/transfer/transfer';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { MapPage } from '../pages/map/map';
+import { ClusterPage } from '../pages/cluster/cluster';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -24,7 +25,8 @@ import { GoogleMapsClusterProvider } from '../providers/google-maps-cluster/goog
     TransferPage,
     HomePage,
     TabsPage,
-    MapPage
+    MapPage,
+    ClusterPage
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,8 @@ import { GoogleMapsClusterProvider } from '../providers/google-maps-cluster/goog
     TransferPage,
     HomePage,
     TabsPage,
-    MapPage
+    MapPage,
+    ClusterPage
   ],
   providers: [
     StatusBar,

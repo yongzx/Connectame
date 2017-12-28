@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Http, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
+import {HubPage} from '../hub/hub';
 
+@IonicPage()
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -13,6 +15,10 @@ export class HomePage {
   donationLocation: string;
 
   constructor(public navCtrl: NavController, public http: Http) {
+  }
+
+  hub(){
+    this.navCtrl.push(HubPage);
   }
 
   passNeedDonation() {

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 
-import { HubPage } from '../hub/hub';
 import { TransferPage } from '../transfer/transfer';
 import { HomePage } from '../home/home';
 
@@ -10,8 +9,7 @@ import { HomePage } from '../home/home';
 export class TabsPage {
 
   tab1Root = HomePage;
-  tab2Root = HubPage;
-  tab3Root = TransferPage;
+  tab2Root = TransferPage;
 
   constructor() {
 

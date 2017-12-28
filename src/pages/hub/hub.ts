@@ -81,7 +81,6 @@ export class HubPage {
     addMarker(hub5, this.map);
 
     // Show Marker Clusters
-    
     /*
     this.map.addListener('click', function (e) {
       placeMarker(e.latLng, this.map);

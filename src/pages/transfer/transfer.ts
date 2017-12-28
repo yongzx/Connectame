@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { MapPage } from '../map/map';
+import { ClusterPage } from '../cluster/cluster';
 
 @IonicPage()
 @Component({
@@ -16,8 +17,8 @@ export class TransferPage {
     this.navCtrl.push(MapPage);
   }
 
-  passDrive(){
-    console.log("Success");
+  clusterPage(){
+    this.navCtrl.push(ClusterPage);
   }
 
 }

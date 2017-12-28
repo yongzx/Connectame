@@ -8,4 +8,4 @@ import { IonicPageModule } from 'ionic-angular';
   entryComponents: [TransferPage]
 })
 
-export class MapPageModule { }
+export class TransferPageModule { }
