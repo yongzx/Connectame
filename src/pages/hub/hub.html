@@ -9,8 +9,15 @@
 <ion-content>
     <!-- 2 Functions: Add Hub + Show Hub-->
     <ion-content>
-        <!-- <div id="floating-panel"> -->
-        <!-- </div> -->
+        <div id="floating-panel">
+            <img src='http://maps.google.com/mapfiles/ms/icons/red-dot.png'/>
+            Hub
+            <br>
+            <img src='http://maps.google.com/mapfiles/ms/icons/green-dot.png'/>
+            Your Location
+            <br>
+            <button ion-button (click)= "showPath()">Path to Closest Hub</button>
+        </div>
         <div #map id="map"></div>
     </ion-content>
 </ion-content>

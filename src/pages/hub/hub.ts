@@ -16,6 +16,7 @@ export class HubPage {
   map: any;
   locations: Array<Object>;
 
+  directionsService = new google.maps.DirectionsService;
   directionsDisplay = new google.maps.DirectionsRenderer;
 
   constructor() {
@@ -56,30 +57,39 @@ export class HubPage {
       center: { lat: 37.77, lng: -122.44 }
     });
 
+    var image = 'http://maps.google.com/mapfiles/ms/icons/green-dot.png';
+    var beachMarker = new google.maps.Marker({
+      position: {lat: 37.777, lng: -122.418},
+      map: this.map,
+      icon: image
+    });
     this.directionsDisplay.setMap(this.map);
+    this.directionsDisplay.setOptions({suppressMarkers: true});
     console.log(this.map);
 
+    
     // Add Markers
-    function addMarker(position, map) {
+    function addMarker(position, map, icon) {
       return new google.maps.Marker({
-        position,
-        map
+        position: position,
+        map: map,
+        icon: icon
       });
     }
 
 
     // Existing Hubs
     const hub1 = new google.maps.LatLng(37.77, -122.44);
-    const hub2 = new google.maps.LatLng(37.76, -122.43);
+    const hub2 = new google.maps.LatLng(37.75, -122.43);
     const hub3 = new google.maps.LatLng(37.78, -122.45);
     const hub4 = new google.maps.LatLng(37.79, -122.44);
     const hub5 = new google.maps.LatLng(37.77, -122.45);
-    addMarker(hub1, this.map);
-    addMarker(hub2, this.map);
-    addMarker(hub3, this.map);
-    addMarker(hub4, this.map);
-    addMarker(hub5, this.map);
-
+    var red_dot = 'http://maps.google.com/mapfiles/ms/icons/red-dot.png';
+    addMarker(hub1, this.map, red_dot);
+    addMarker(hub2, this.map, red_dot);
+    addMarker(hub3, this.map, red_dot);
+    addMarker(hub4, this.map, red_dot);
+    addMarker(hub5, this.map, red_dot);
     // Show Marker Clusters
     /*
     this.map.addListener('click', function (e) {
@@ -95,5 +105,24 @@ export class HubPage {
     }
     */
 
+  }
+
+  showPath(){
+    var start = '1412, Market Street, San Francisco';
+    var hub1 = new google.maps.LatLng(37.77, -122.44);
+    this.calculateAndDisplayRoute(start, hub1);
+  }
+  calculateAndDisplayRoute(s, e) {
+    this.directionsService.route({
+      origin: s,
+      destination: e,
+      travelMode: 'WALKING',
+    }, (response, status) => {
+      if (status === 'OK') {
+        this.directionsDisplay.setDirections(response);
+      } else {
+        window.alert('Directions request failed due to ' + status);
+      }
+    });
   }
 }
