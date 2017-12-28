@@ -13,6 +13,9 @@ import { MapPage } from '../pages/map/map';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { GoogleMapsProvider } from '../providers/google-maps/google-maps';
+import { ConnectivityProvider } from '../providers/connectivity/connectivity';
+import { GoogleMapsClusterProvider } from '../providers/google-maps-cluster/google-maps-cluster';
 
 @NgModule({
   declarations: [
@@ -41,7 +44,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     StatusBar,
     SplashScreen,
     GoogleMaps,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    GoogleMapsProvider,
+    ConnectivityProvider,
+    GoogleMapsClusterProvider
   ]
 })
 export class AppModule {}

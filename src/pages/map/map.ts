@@ -12,8 +12,10 @@ declare var google: any;
 export class MapPage {
   @ViewChild('map') mapElement: ElementRef;
   map: any;
-  start = 'chicago, il';
-  end = 'chicago, il';
+  start = '1412, Market Street, San Francisco';
+  fetch_start = "412, Sutter Street, San Francisco";
+  fetch_end = '851, California Street, San Francisco';
+  end = "500, California Street, San Francisco";
   directionsService = new google.maps.DirectionsService;
   directionsDisplay = new google.maps.DirectionsRenderer;
 
@@ -27,18 +29,21 @@ export class MapPage {
 
   initMap() {
     this.map = new google.maps.Map(this.mapElement.nativeElement, {
-      zoom: 7,
-      center: {lat: 41.85, lng: -87.65}
+      zoom: 11,
+      center: { lat: 37.77, lng: -122.44 }
     });
 
     this.directionsDisplay.setMap(this.map);
+    this.calculateAndDisplayRoute(this.start, this.fetch_start, this.fetch_end, this.end);
   }
 
-  calculateAndDisplayRoute() {
+  calculateAndDisplayRoute(s, fs, fe, e) {
     this.directionsService.route({
-      origin: this.start,
-      destination: this.end,
-      travelMode: 'DRIVING'
+      origin: s,
+      destination: e,
+      travelMode: 'DRIVING',
+      waypoints: [{location: fs, stopover: true}, {location: fe, stopover: true}],
+      optimizeWaypoints: true
     }, (response, status) => {
       if (status === 'OK') {
         this.directionsDisplay.setDirections(response);
