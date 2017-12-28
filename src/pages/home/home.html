@@ -5,29 +5,26 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-list>
     <ion-item>
-      <p>Want Food</p>
+      <h1>Want Food</h1>
     </ion-item>
 
-    <ion-item>
+    <ion-item class="need">
       <ion-label color="primary">Location</ion-label>
       <ion-input placeholder="Address" [(ngModel)]="needLocation"></ion-input>
     </ion-item>
-  </ion-list>
 
-  <ion-list>
     <ion-item>
-      <p>Donate Food</p>
+      <h1>Donate Food</h1>
     </ion-item>
 
-    <ion-item>
+    <ion-item class = "donate">
         <ion-label color="primary">Location</ion-label>
         <ion-input placeholder="Address" [(ngModel)]="donationLocation"></ion-input>
     </ion-item>
-  </ion-list>
 
-
+  <ion-buttons text-center>
   <button ion-button (click)="passNeedDonation()">Submit</button>
+  </ion-buttons>
 
 </ion-content>
