@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HttpModule } from '@angular/http';
+import { GoogleMaps } from '@ionic-native/google-maps';
 
-import { AboutPage } from '../pages/about/about';
-import { TravelPage } from '../pages/travel/travel';
+import { HubPage } from '../pages/hub/hub';
+import { TransferPage } from '../pages/transfer/transfer';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { MapPage } from '../pages/map/map';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -15,10 +17,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
-    TravelPage,
+    HubPage,
+    TransferPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    MapPage
   ],
   imports: [
     BrowserModule,
@@ -28,14 +31,16 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
-    TravelPage,
+    HubPage,
+    TransferPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    MapPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    GoogleMaps,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

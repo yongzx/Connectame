@@ -16,6 +16,7 @@ export class HomePage {
   }
 
   passNeedDonation() {
+    // email:yzxyzx@yzx.com pw:yzxyzxyzx
     if (this.needLocation) {
       console.log(this.needLocation);
       let headersNeed = new Headers();
