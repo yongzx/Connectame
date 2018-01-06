@@ -1,12 +1,12 @@
 # Connectame
 
-## Summary
-An Ionic app (adapted from a native Android app) that enables peer-to-peer donation transactions in Puerto Rico. 
-
 ## Motivation
 Hurricane Maria struck Puerto Rico and destroyed the houses and disrupted the supply of energy, food, and water. The residents 
 faced two main challenges. The organization who distributed the donated items could not ensure the donated items reached
 the people who needed them, and the process of distributing the donated items was inefficient. 
+
+## Summary
+An Ionic app (adapted from a native Android app) that enables peer-to-peer donation transactions in Puerto Rico. 
 
 This hybrid mobile app serves two main functions:
 1. It guarantees the donated items reach the people who need them as the donor inputs the items he/she donates and his/her location, and the 
