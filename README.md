@@ -13,11 +13,9 @@ This hybrid mobile app serves two main functions:
 recepient inputs the items such as food and water he/she needs and his/her location. The app will match them and if a person is travelling from
 the place of donor to recipient, it will notify the person the route to pick up the donated items and deliver the items to the
 recepients.
+<img src="images/Transfer.gif" width="256" height="512" title="Transfer">
+
 2. It collects data about the locations of the recipients, and updates the organization which distributes the donated items about
 the hubs where the organization can best distribute the donated items. It will also update the user where the hub is so the user
 can go to the hub to collect the donated item.
-
-## Designs
-
-
-## How It Works
+<img src="images/Hub.gif" width="256" height="512" title="Hub">
